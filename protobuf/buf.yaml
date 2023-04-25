@@ -1,0 +1,14 @@
+version: v1
+name: buf.build/k8sgpt-ai/k8sgpt
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/grpc-ecosystem/grpc-gateway
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - buf.build/googleapis/googleapis
+    - buf.build/grpc-ecosystem/grpc-gateway

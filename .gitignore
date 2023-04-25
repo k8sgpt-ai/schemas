@@ -1,0 +1,5 @@
+# buf generated files
+gen/
+proto/
+
+vendor/
