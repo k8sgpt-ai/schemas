@@ -4,15 +4,6 @@ package schema.v1;
 
 option go_package = "schema/service/v1";
 
-message Analysis {
-    repeated AnalysisItem analysis = 1;
-}
-
-message AnalysisItem {
-    string name = 1;
-    string description = 2;
-}
-
 message AnalyzeRequest {
     string backend = 1;
     string namespace = 2;
@@ -24,15 +15,37 @@ message AnalyzeRequest {
     string output = 8;
 }
 
+message ErrorDetail {
+  string text = 1;
+}
+
+message Result {
+  string kind = 1;
+  string name = 2;
+  ErrorDetail error = 3;
+  string details = 4;
+  string parent_object = 5;
+}
+
 message AnalyzeResponse {
-    Analysis analysis = 1;
-    Error error = 2;
+  Analysis analysis = 1;
+  Error error = 2;
 }
 
 message Error {
-    string message = 1;
-    int32 code = 2;
+  string message = 1;
+  int32 code = 2;
 }
+
+message Analysis {
+  repeated AnalysisItem analysis = 1;
+}
+
+message AnalysisItem {
+  string name = 1;
+  string description = 2;
+}
+
 
 // Service defines the exposed rpcs of k8sgpt
 service Server {
