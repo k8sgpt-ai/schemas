@@ -13,6 +13,7 @@ message AnalyzeRequest {
     string language = 6;
     int32 max_concurrency = 7;
     string output = 8;
+    repeated string filters = 9;
 }
 
 message SensitiveData {
