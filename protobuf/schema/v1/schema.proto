@@ -13,6 +13,7 @@ message AnalyzeRequest {
     string language = 6;
     int32 max_concurrency = 7;
     string output = 8;
+    repeated string filters = 9;
 }
 
 message SensitiveData {
@@ -55,8 +56,21 @@ message AnalysisItem {
   string description = 2;
 }
 
+message ConfigRequest {
+  Cache cache = 1;
+}
+
+message Cache {
+  string region = 1;
+  string bucketName = 2;
+}
+
+message ConfigResponse {
+  string status = 1;
+}
 
 // Service defines the exposed rpcs of k8sgpt
 service Server {
     rpc Analyze (AnalyzeRequest) returns (AnalyzeResponse) {}
+    rpc Config (ConfigRequest) returns (ConfigResponse) {}
 }
