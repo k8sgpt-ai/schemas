@@ -72,5 +72,6 @@ message ConfigResponse {
 // Service defines the exposed rpcs of k8sgpt
 service Server {
     rpc Analyze (AnalyzeRequest) returns (AnalyzeResponse) {}
-    rpc Config (ConfigRequest) returns (ConfigResponse) {}
+    rpc AddConfig (ConfigRequest) returns (ConfigResponse) {}
+    rpc RemoveConfig (ConfigRequest) returns (ConfigResponse) {}
 }
