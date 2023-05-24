@@ -16,7 +16,7 @@ The `AnalysisItem` object represents an item that can be analyzed by the tool. I
 
 ### Config
 
-The module `config.v1` contains a single `Service` with one rpc named `Config`. The request object for the `Config` method is `ConfigRequest`, which contains parameters for configuring the system. The response object for the `Config` method is `ConfigResponse`, which contains the status of the configuration operation.
+The module `config.v1` contains a single `Service` with two RPCs named `AddConfig` and `RemoveConfig`. The request object for both methods is `ConfigRequest`, which contains parameters for configuring the system. The response object for both methods is `ConfigResponse`, which contains the status of the configuration operation.
 
 The `ConfigRequest` object contains a `Cache` object, which is used to specify cache configuration. The `Cache` object has two fields: `region`, which represents the cache region, and `bucketName`, which represents the name of the cache bucket.
 
