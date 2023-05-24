@@ -5,20 +5,20 @@ package schema.v1;
 option go_package = "schema/service/v1";
 
 message AnalyzeRequest {
-    string backend = 1;
-    string namespace = 2;
-    bool explain = 3;
-    bool anonymize = 4;
-    bool nocache = 5;
-    string language = 6;
-    int32 max_concurrency = 7;
-    string output = 8;
-    repeated string filters = 9;
+  string backend = 1;
+  string namespace = 2;
+  bool explain = 3;
+  bool anonymize = 4;
+  bool nocache = 5;
+  string language = 6;
+  int32 max_concurrency = 7;
+  string output = 8;
+  repeated string filters = 9;
 }
 
 message SensitiveData {
-    string unmasked = 1;
-    string masked = 2;
+  string unmasked = 1;
+  string masked = 2;
 }
 
 message ErrorDetail {
@@ -56,22 +56,29 @@ message AnalysisItem {
   string description = 2;
 }
 
-message ConfigRequest {
+message AddConfigRequest {
   Cache cache = 1;
+}
+
+message AddConfigResponse {
+  string status = 1;
+}
+
+message RemoveConfigRequest {
+  Cache cache = 1;
+}
+
+message RemoveConfigResponse {
+  string status = 1;
 }
 
 message Cache {
   string region = 1;
-  string bucketName = 2;
+  string bucket_name = 2;
 }
 
-message ConfigResponse {
-  string status = 1;
-}
-
-// Service defines the exposed rpcs of k8sgpt
-service Server {
-    rpc Analyze (AnalyzeRequest) returns (AnalyzeResponse) {}
-    rpc AddConfig (ConfigRequest) returns (ConfigResponse) {}
-    rpc RemoveConfig (ConfigRequest) returns (ConfigResponse) {}
+service ServerService {
+  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
+  rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
+  rpc RemoveConfig(RemoveConfigRequest) returns (RemoveConfigResponse) {}
 }
