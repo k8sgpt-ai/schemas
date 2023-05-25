@@ -1,7 +1,6 @@
 {
     "packages": {
         ".": {
-            "package-name": "protobuf",
             "release-type": "simple",
             "prerelease": false,
             "bump-minor-pre-major": true,
