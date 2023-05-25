@@ -78,7 +78,7 @@ message Cache {
 }
 
 service ServerService {
-  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
-  rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
-  rpc RemoveConfig(RemoveConfigRequest) returns (RemoveConfigResponse) {}
+  rpc Analyze(stream AnalyzeRequest) returns (AnalyzeResponse) {}
+  rpc AddConfig(stream AddConfigRequest) returns (AddConfigResponse) {}
+  rpc RemoveConfig(stream RemoveConfigRequest) returns (RemoveConfigResponse) {}
 }
