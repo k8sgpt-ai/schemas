@@ -12,6 +12,9 @@ install-buf:
 lint: guard-GOPATH
 	cd protobuf && ${GOPATH}/bin/buf lint
 
+format: guard-GOPATH
+	cd protobuf && ${GOPATH}/bin/buf format -w
+
 gen-go: install-buf guard-GOPATH
 	${GOPATH}/bin/buf generate --template protobuf/buf.gen.go.yaml
 
