@@ -58,6 +58,7 @@ message AnalysisItem {
 
 message AddConfigRequest {
   Cache cache = 1;
+  Integrations integrations = 2;
 }
 
 message AddConfigResponse {
@@ -66,6 +67,7 @@ message AddConfigResponse {
 
 message RemoveConfigRequest {
   Cache cache = 1;
+  Integrations integrations = 2;
 }
 
 message RemoveConfigResponse {
@@ -75,6 +77,14 @@ message RemoveConfigResponse {
 message Cache {
   string region = 1;
   string bucket_name = 2;
+}
+
+message Trivy {
+  bool enabled = 1;
+}
+
+message Integrations {
+  Trivy trivy = 1;
 }
 
 service ServerService {
