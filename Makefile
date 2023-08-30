@@ -1,5 +1,5 @@
 BUF_VERSION=v1.6.0
-
+TAG=protobuf-v0.1.2
 guard-%:
 	@ if [ "${${*}}" = "" ]; then \
         echo "Environment variable $* not set"; \
@@ -17,3 +17,5 @@ gen-go: install-buf guard-GOPATH
 
 gen-go-server: install-buf guard-GOPATH
 	${GOPATH}/bin/buf generate --template protobuf/buf.gen.go-server.yaml
+push-tag:
+	cd protobuf && buf push --tag=${TAG}
