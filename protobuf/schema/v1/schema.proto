@@ -89,8 +89,14 @@ message Integrations {
   Trivy trivy = 1;
 }
 
+message ListIntegrationsRequest {}
+
+message ListIntegrationsResponse {
+  repeated string integrations = 1;
+}
 service ServerService {
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
   rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
   rpc RemoveConfig(RemoveConfigRequest) returns (RemoveConfigResponse) {}
+  rpc ListIntegrations(ListIntegrationsRequest) returns (ListIntegrationsResponse) {}
 }
