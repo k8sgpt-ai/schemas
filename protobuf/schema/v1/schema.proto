@@ -89,10 +89,12 @@ message Integrations {
   Trivy trivy = 1;
 }
 
-message ListIntegrationsRequest {}
+message ListIntegrationsRequest {
 
+}
+// Add integrations to list
 message ListIntegrationsResponse {
-  repeated string integrations = 1;
+  Trivy trivy = 1;
 }
 service ServerService {
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
