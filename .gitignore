@@ -1,4 +1,5 @@
 # buf generated files
+.idea
 gen/
 proto/
 
