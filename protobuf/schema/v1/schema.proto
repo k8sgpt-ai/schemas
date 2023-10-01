@@ -92,6 +92,7 @@ message Integrations {
 }
 
 message ListIntegrationsRequest {}
+
 // Add integrations to list
 message ListIntegrationsResponse {
   Trivy trivy = 1;
