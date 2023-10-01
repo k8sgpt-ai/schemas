@@ -77,6 +77,8 @@ message RemoveConfigResponse {
 message Cache {
   string region = 1;
   string bucket_name = 2;
+  string storage_account = 3;
+  string container_name = 4;
 }
 
 message Trivy {
