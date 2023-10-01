@@ -91,13 +91,12 @@ message Integrations {
   Trivy trivy = 1;
 }
 
-message ListIntegrationsRequest {
-
-}
+message ListIntegrationsRequest {}
 // Add integrations to list
 message ListIntegrationsResponse {
   Trivy trivy = 1;
 }
+
 service ServerService {
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
   rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
