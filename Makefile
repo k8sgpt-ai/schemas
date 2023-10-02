@@ -1,5 +1,5 @@
 BUF_VERSION=v1.6.0
-TAG=protobuf-v0.1.3
+TAG=protobuf-v0.1.4
 guard-%:
 	@ if [ "${${*}}" = "" ]; then \
         echo "Environment variable $* not set"; \
