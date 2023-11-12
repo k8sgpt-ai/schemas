@@ -79,6 +79,7 @@ message Cache {
   string bucket_name = 2;
   string storage_account = 3;
   string container_name = 4;
+  string project_id = 5;
 }
 
 message Trivy {
