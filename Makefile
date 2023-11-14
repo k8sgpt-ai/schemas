@@ -1,4 +1,4 @@
-BUF_VERSION=v1.6.0
+BUF_VERSION=v1.28.0
 TAG=protobuf-v0.1.4
 guard-%:
 	@ if [ "${${*}}" = "" ]; then \

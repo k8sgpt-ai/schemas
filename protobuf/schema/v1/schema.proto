@@ -75,11 +75,27 @@ message RemoveConfigResponse {
 }
 
 message Cache {
+  oneof cache_type {
+    S3Cache s3_cache = 1;
+    AzureCache azure_cache = 2;
+    GCSCache gcs_cache = 3;
+  }
+}
+
+message S3Cache {
   string region = 1;
   string bucket_name = 2;
-  string storage_account = 3;
-  string container_name = 4;
-  string project_id = 5;
+}
+
+message AzureCache {
+  string storage_account = 1;
+  string container_name = 2;
+}
+
+message GCSCache {
+  string region = 1;
+  string bucket_name = 2;
+  string project_id = 3;
 }
 
 message Trivy {
