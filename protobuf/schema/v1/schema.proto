@@ -4,6 +4,9 @@ package schema.v1;
 
 option go_package = "schema/service/v1";
 
+// well know type by google, gRPC gateway uses HTTP annotation.
+import "google/api/annotations.proto";
+
 message AnalyzeRequest {
   string backend = 1;
   string namespace = 2;
@@ -116,8 +119,21 @@ message ListIntegrationsResponse {
 }
 
 service ServerService {
-  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {}
+  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {
+    // option type is http
+    option (google.api.http) = {
+      // this is url, for RESTfull/JSON api and method
+      // this line means when a HTTP post request comes with "/v1/analyze" call this rpc method over this service
+        get: "/v1/analyze"
+      };
+  }
   rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
   rpc RemoveConfig(RemoveConfigRequest) returns (RemoveConfigResponse) {}
-  rpc ListIntegrations(ListIntegrationsRequest) returns (ListIntegrationsResponse) {}
+  rpc ListIntegrations(ListIntegrationsRequest) returns (ListIntegrationsResponse) {
+    // option type is http
+    option (google.api.http) = {
+      // this line means when a HTTP GET request comes with "/v1/list" call this rpc method over this service
+        get: "/v1/list"
+      };
+  }
 }
