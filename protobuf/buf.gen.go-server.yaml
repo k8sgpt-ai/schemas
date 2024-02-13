@@ -11,7 +11,7 @@ plugins:
     opt:
       - require_unimplemented_servers=false
       - paths=source_relative
-  - plugin: buf.build/grpc-ecosystem/plugins/grpc-gateway:v2.10.3-1
+  - plugin: buf.build/grpc-ecosystem/gateway:v2.18.1
     out: ../proto/go-server
     opt:
       - paths=source_relative

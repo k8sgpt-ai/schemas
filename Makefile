@@ -13,9 +13,9 @@ lint: guard-GOPATH
 	cd protobuf && ${GOPATH}/bin/buf lint
 
 gen-go: install-buf guard-GOPATH
-	${GOPATH}/bin/buf generate --template protobuf/buf.gen.go.yaml
+	cd protobuf && ${GOPATH}/bin/buf generate --template buf.gen.go.yaml
 
 gen-go-server: install-buf guard-GOPATH
-	${GOPATH}/bin/buf generate --template protobuf/buf.gen.go-server.yaml
+	cd protobuf && ${GOPATH}/bin/buf generate --template buf.gen.go-server.yaml
 push-tag:
 	cd protobuf && buf push --tag=${TAG}
