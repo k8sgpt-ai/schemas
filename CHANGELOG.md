@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/k8sgpt-ai/schemas/compare/v0.1.2...v0.1.3) (2024-02-13)
+
+
+### Other
+
+* refactored ([d738a20](https://github.com/k8sgpt-ai/schemas/commit/d738a2091f5b47f5782fcb2e107623d0b9480f2b))
+* reworked build ([a3d60f8](https://github.com/k8sgpt-ai/schemas/commit/a3d60f86e791a5aa59ba0b69336e5a7ed46c5c44))
+
 ## [0.1.2](https://github.com/k8sgpt-ai/schemas/compare/v0.1.1...v0.1.2) (2024-02-08)
 
 
