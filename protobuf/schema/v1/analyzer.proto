@@ -3,17 +3,15 @@ syntax = "proto3";
 package schema.v1;
 
 import "schema/v1/server-service.proto";
+
 option go_package = "schema/service/v1";
 
-
-message AnalyzerRunRequest {
-
-}
+message AnalyzerRunRequest {}
 
 message AnalyzerRunResponse {
   Result result = 1;
 }
 
 service AnalyzerService {
-    rpc Run(AnalyzerRunRequest) returns (AnalyzerRunResponse) {} 
+  rpc Run(AnalyzerRunRequest) returns (AnalyzerRunResponse) {}
 }
