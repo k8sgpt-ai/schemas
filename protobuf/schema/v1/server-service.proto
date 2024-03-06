@@ -124,6 +124,7 @@ service ServerService {
     option (google.api.http) = {
       // this is url, for RESTfull/JSON api and method
       // this line means when a HTTP post request comes with "/v1/analyze" call this rpc method over this service
+      // the request body AnalyzeRequest can be passed in to parameterize the request
       post: "/v1/analyze"
       body: "*"
     };
