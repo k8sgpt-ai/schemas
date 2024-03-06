@@ -125,6 +125,7 @@ service ServerService {
       // this is url, for RESTfull/JSON api and method
       // this line means when a HTTP post request comes with "/v1/analyze" call this rpc method over this service
       post: "/v1/analyze"
+      body: "*"
     };
   }
   rpc AddConfig(AddConfigRequest) returns (AddConfigResponse) {}
