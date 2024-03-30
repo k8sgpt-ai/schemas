@@ -88,6 +88,7 @@ message Cache {
 message S3Cache {
   string region = 1;
   string bucket_name = 2;
+  string endpoint = 3;
 }
 
 message AzureCache {
