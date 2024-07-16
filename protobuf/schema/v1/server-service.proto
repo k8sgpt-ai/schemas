@@ -10,14 +10,14 @@ option go_package = "schema/service/v1";
 message AnalyzeRequest {
   string backend = 1;
   string namespace = 2;
-  string label_selector = 3;
-  bool explain = 4;
-  bool anonymize = 5;
-  bool nocache = 6;
-  string language = 7;
-  int32 max_concurrency = 8;
-  string output = 9;
-  repeated string filters = 10;
+  bool explain = 3;
+  bool anonymize = 4;
+  bool nocache = 5;
+  string language = 6;
+  int32 max_concurrency = 7;
+  string output = 8;
+  repeated string filters = 9;
+  string label_selector = 10;
 }
 
 message SensitiveData {
