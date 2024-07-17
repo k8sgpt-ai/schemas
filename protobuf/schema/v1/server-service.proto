@@ -110,10 +110,6 @@ message Trivy {
   string namespace = 3;
 }
 
-message AWS {
-  bool enabled = 1;
-}
-
 message Integrations {
   Trivy trivy = 1;
 }
