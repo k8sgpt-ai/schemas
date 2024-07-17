@@ -17,6 +17,7 @@ message AnalyzeRequest {
   int32 max_concurrency = 7;
   string output = 8;
   repeated string filters = 9;
+  string label_selector = 10;
 }
 
 message SensitiveData {
