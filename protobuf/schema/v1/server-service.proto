@@ -63,6 +63,7 @@ message AnalysisItem {
 message AddConfigRequest {
   Cache cache = 1;
   Integrations integrations = 2;
+  repeated CustomAnalyzer custom_analyzers = 3;
 }
 
 message AddConfigResponse {
@@ -72,6 +73,7 @@ message AddConfigResponse {
 message RemoveConfigRequest {
   Cache cache = 1;
   Integrations integrations = 2;
+  repeated CustomAnalyzer custom_analyzers = 3;
 }
 
 message RemoveConfigResponse {
@@ -84,6 +86,16 @@ message Cache {
     AzureCache azure_cache = 2;
     GCSCache gcs_cache = 3;
   }
+}
+
+message CustomAnalyzer {
+  string name = 1;
+  Connection connection = 2;
+}
+
+message Connection {
+  string url = 1;
+  string port = 2;
 }
 
 message S3Cache {
