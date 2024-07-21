@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.4](https://github.com/k8sgpt-ai/schemas/compare/v0.1.3...v0.1.4) (2024-07-21)
+
+
+### Features
+
+* added custom analyzer config ([7bdd130](https://github.com/k8sgpt-ai/schemas/commit/7bdd130a72ece20b7aee2424a7b9b6de751cf8ad))
+* support label_selector ([edf2484](https://github.com/k8sgpt-ai/schemas/commit/edf24843edb71bac9928591992e801de7b5a0873))
+* support label_selector ([133fd80](https://github.com/k8sgpt-ai/schemas/commit/133fd80704bc0f9d2ea4d18d405fbeba52ff5e8c))
+
+
+### Bug Fixes
+
+* remove unexpected line ([0727830](https://github.com/k8sgpt-ai/schemas/commit/072783070be9d08d58ac8f972798ac8d497d2c24))
+
 ## [0.1.3](https://github.com/k8sgpt-ai/schemas/compare/v0.1.2...v0.1.3) (2024-04-04)
 
 
