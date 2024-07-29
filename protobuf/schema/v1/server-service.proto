@@ -122,8 +122,15 @@ message Trivy {
   string namespace = 3;
 }
 
+message Kyverno {
+  bool enabled = 1;
+  bool skip_install = 2;
+  string namespace = 3;
+}
+
 message Integrations {
   Trivy trivy = 1;
+  Kyverno kyverno = 2;
 }
 
 message ListIntegrationsRequest {}
@@ -131,6 +138,7 @@ message ListIntegrationsRequest {}
 // Add integrations to list
 message ListIntegrationsResponse {
   Trivy trivy = 1;
+  Kyverno kyverno = 2;
 }
 
 service ServerService {
