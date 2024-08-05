@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package schema.v1;
+
+// well know type by google, gRPC gateway uses HTTP annotation.
+import "google/api/annotations.proto";
+
+option go_package = "schema/service/v1";
+
+message AnalyzeRequest {
+  string backend = 1;
+  string namespace = 2;
+  bool explain = 3;
+  bool anonymize = 4;
+  bool nocache = 5;
+  string language = 6;
+  int32 max_concurrency = 7;
+  string output = 8;
+  repeated string filters = 9;
+  string label_selector = 10;
+}
+
+message SensitiveData {
+  string unmasked = 1;
+  string masked = 2;
+}
+
+message ErrorDetail {
+  string text = 1;
+  repeated SensitiveData sensitive = 2;
+}
+
+message Result {
+  string kind = 1;
+  string name = 2;
+  repeated ErrorDetail error = 3;
+  string details = 4;
+  string parent_object = 5;
+}
+
+message AnalyzeResponse {
+  Error error = 1;
+  repeated string errors = 2;
+  string status = 3;
+  int32 problems = 4;
+  repeated Result results = 5;
+}
+
+message Error {
+  string message = 1;
+  int32 code = 2;
+}
+
+
+service ServerAnalyzerService {
+  rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {
+    // option type is http
+    option (google.api.http) = {
+      // this is url, for RESTfull/JSON api and method
+      // this line means when a HTTP post request comes with "/v1/analyze" call this rpc method over this service
+      // the request body AnalyzeRequest can be passed in to parameterize the request
+      post: "/v1/analyze"
+      body: "*"
+    };
+  }
+};
