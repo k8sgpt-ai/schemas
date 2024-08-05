@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package schema.v1;
+// well know type by google, gRPC gateway uses HTTP annotation.
+import "google/api/annotations.proto";
+
+import "schema/v1/server_analyzer_service.proto";
+
+option go_package = "schema/service/v1";
+
+message RunRequest {}
+
+message RunResponse {
+  schema.v1.Result result = 1;
+}
+
+service CustomAnalyzerService {
+
+  rpc Run (RunRequest) returns (RunResponse) {
+    option (google.api.http) = {
+      post: "/v1/run"
+      body: "*"
+    };
+  }
+}
