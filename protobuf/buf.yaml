@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/ronaldpetty/ronk8sgpt
+name: buf.build/k8sgpt-ai/k8sgpt
 deps:
   - buf.build/googleapis/googleapis
   - buf.build/grpc-ecosystem/grpc-gateway
