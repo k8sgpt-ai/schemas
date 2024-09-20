@@ -46,22 +46,6 @@ message AnalyzeResponse {
   repeated Result results = 5;
 }
 
-message Error {
-  string message = 1;
-  int32 code = 2;
-}
-
-message QueryRequest {
-  string backend = 1;
-  string query = 2;
-}
-
-message QueryResponse {
-  Error error = 1;
-  string response = 2;
-}
-
-
 service ServerAnalyzerService {
 
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {
