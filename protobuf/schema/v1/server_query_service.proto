@@ -24,7 +24,7 @@ message QueryResponse {
 }
 
 
-service ServerAnalyzerService {
+service ServerQueryService {
 
   rpc Query(QueryRequest) returns (QueryResponse) {
     option (google.api.http) = {
