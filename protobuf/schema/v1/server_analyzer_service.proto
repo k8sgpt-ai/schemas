@@ -64,16 +64,6 @@ message QueryResponse {
 
 service ServerAnalyzerService {
 
-  rpc Query(QueryRequest) returns (QueryResponse) {
-    option (google.api.http) = {
-      // this is url, for RESTfull/JSON api and method
-      // this line means when a HTTP post request comes with "/v1/query" call this rpc method over this service
-      // the request body QueryRequest can be passed in to parameterize the request
-      post: "/v1/query"
-      body: "*"
-    };
-  }
-
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {
     // option type is http
     option (google.api.http) = {
