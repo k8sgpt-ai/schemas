@@ -8,7 +8,7 @@ import "google/api/annotations.proto";
 option go_package = "schema/service/v1";
 
 
-message Error {
+message QueryError {
   string message = 1;
   int32 code = 2;
 }
@@ -19,7 +19,7 @@ message QueryRequest {
 }
 
 message QueryResponse {
-  Error error = 1;
+  QueryError error = 1;
   string response = 2;
 }
 

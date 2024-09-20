@@ -46,8 +46,13 @@ message AnalyzeResponse {
   repeated Result results = 5;
 }
 
-service ServerAnalyzerService {
+message Error {
+  string message = 1;
+  int32 code = 2;
+}
 
+service ServerAnalyzerService {
+  
   rpc Analyze(AnalyzeRequest) returns (AnalyzeResponse) {
     // option type is http
     option (google.api.http) = {
