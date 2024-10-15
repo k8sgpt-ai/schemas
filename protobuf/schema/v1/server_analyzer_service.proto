@@ -18,6 +18,7 @@ message AnalyzeRequest {
   string output = 8;
   repeated string filters = 9;
   string label_selector = 10;
+  string kubeconfig = 11;
 }
 
 message SensitiveData {
