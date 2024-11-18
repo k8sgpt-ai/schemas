@@ -41,6 +41,7 @@ message Cache {
     S3Cache s3_cache = 1;
     AzureCache azure_cache = 2;
     GCSCache gcs_cache = 3;
+    InterplexCache interplex_cache = 4;
   }
 }
 
@@ -70,6 +71,10 @@ message GCSCache {
   string region = 1;
   string bucket_name = 2;
   string project_id = 3;
+}
+
+message InterplexCache {
+  string endpoint = 1;
 }
 
 message Trivy {
