@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.1.4](https://github.com/k8sgpt-ai/schemas/compare/v0.1.3...v0.1.4) (2024-11-18)
+
+
+### Features
+
+* added custom analyzer config ([7bdd130](https://github.com/k8sgpt-ai/schemas/commit/7bdd130a72ece20b7aee2424a7b9b6de751cf8ad))
+* added generic query mode ([e1fa52d](https://github.com/k8sgpt-ai/schemas/commit/e1fa52d3c9bb7999a1ae33c1776303545cf171e4))
+* added generic query mode ([3bf45b3](https://github.com/k8sgpt-ai/schemas/commit/3bf45b3928f0fc6059285266b73259e82dc03228))
+* added interplex ([75f3f45](https://github.com/k8sgpt-ai/schemas/commit/75f3f4542ebf6465a66d0c0ca40d38adb7233851))
+* reworking protobuf files ([744d6bb](https://github.com/k8sgpt-ai/schemas/commit/744d6bb05404baada9da397a33556cd94286f9ed))
+* support label_selector ([edf2484](https://github.com/k8sgpt-ai/schemas/commit/edf24843edb71bac9928591992e801de7b5a0873))
+* support label_selector ([133fd80](https://github.com/k8sgpt-ai/schemas/commit/133fd80704bc0f9d2ea4d18d405fbeba52ff5e8c))
+
+
+### Bug Fixes
+
+* remove unexpected line ([0727830](https://github.com/k8sgpt-ai/schemas/commit/072783070be9d08d58ac8f972798ac8d497d2c24))
+
+
+### Other
+
+* pushed tag ([af12c9f](https://github.com/k8sgpt-ai/schemas/commit/af12c9f62aca5e379daa0c30add1f9a5462d3a4b))
+* split out into another service ([327bb73](https://github.com/k8sgpt-ai/schemas/commit/327bb733aec02ff9ed8af18cdb212449e8c2b263))
+* split out into another service ([8a21f12](https://github.com/k8sgpt-ai/schemas/commit/8a21f12a6e90b3f812b76ccaeb4ef8253c81ba72))
+* split out into another service ([df5786b](https://github.com/k8sgpt-ai/schemas/commit/df5786b12c2942fa5bf99fa1bd635225bbd39239))
+* split out into another service ([6c4c41c](https://github.com/k8sgpt-ai/schemas/commit/6c4c41c2cd704e6aa5ccb1f563b3a9d28796a20c))
+
 ## [0.1.3](https://github.com/k8sgpt-ai/schemas/compare/v0.1.2...v0.1.3) (2024-04-04)
 
 
