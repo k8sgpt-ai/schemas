@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/k8sgpt-ai/schemas/compare/v0.1.4...v0.1.5) (2024-12-02)
+
+
+### Other
+
+* updated ([504a742](https://github.com/k8sgpt-ai/schemas/commit/504a742114118dfde5751dfb8dbbc6d52b8a22c5))
+
 ## [0.1.4](https://github.com/k8sgpt-ai/schemas/compare/v0.1.3...v0.1.4) (2024-11-18)
 
 
